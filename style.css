@@ -1,0 +1,422 @@
+/* ===========================
+   ОБЩИЕ СТИЛИ
+   (действуют на всех страницах)
+=========================== */
+
+body {
+    color: #ccb9ec;
+    background-color: #2b1533;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    font-size: 15px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #e0ccff;
+}
+
+h2 {
+    font-size: 20px;
+    color: #d4b8f0;
+    margin: 5px;
+}
+
+p {
+    margin: 5px;
+}
+
+label {
+    margin: 5px;
+}
+
+textarea {
+    margin: 5px;
+}
+
+iframe {
+    margin: 5px;
+}
+
+code {
+    background-color: #3d1f47;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #f0c0ff;
+}
+
+
+/* ===========================
+   ССЫЛКИ
+=========================== */
+
+a {
+    margin: 5px;
+    color: #a77ece;
+}
+
+a:visited {
+    color: #a77ece;
+    /* такой же цвет как обычная ссылка */
+}
+
+a:hover {
+    color: rgb(153, 76, 177);
+}
+
+a:active {
+    color: rgb(191, 18, 214);
+}
+
+
+/* ===========================
+   КНОПКИ
+=========================== */
+
+button {
+    background-color: #6e1148;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+/* класс .btn — ссылка стилизованная под кнопку */
+.btn {
+    display: inline-block;
+    background-color: #6e1148;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.btn:hover {
+    background-color: #a01a6a;
+    color: white;
+}
+
+
+/* ===========================
+   ПРОГРЕСС-БАРЫ
+=========================== */
+
+progress {
+    width: 200px;
+    height: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3d1f47;
+    margin: 5px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #3d1f47;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #6e1148;
+    border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #6e1148;
+    border-radius: 10px;
+}
+
+
+/* ===========================
+   ФУТЕР (подвал сайта)
+=========================== */
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid rgb(90, 3, 25);
+    color: #d4b8f0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ===========================
+   СКРОЛЛБАР
+=========================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2b1533;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6e1148;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a01a6a;
+}
+
+
+/* ===========================
+   ГЛАВНАЯ СТРАНИЦА (.home)
+=========================== */
+
+.home a {
+    text-decoration: none;
+}
+.home h1{
+    color: #a77ece;
+}
+.home nav {
+    border: 2px solid rgb(90, 3, 25);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+}
+
+.home nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.home nav ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(90, 3, 25);
+}
+
+.home nav ul li:last-child {
+    border-bottom: none;
+}
+
+.home nav ul li a {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.home nav ul li p {
+    margin: 2px 0 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.home img {
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(90, 3, 25);
+    border-radius: 20px;
+    margin-top: 20px;
+    display: block;
+}
+.video-bg-home {
+    position: fixed;     /* Фиксирует видео, чтобы оно не двигалось при скролле */
+    top: 0;
+    left: 0;
+    width: 100%;         /* На всю ширину экрана */
+    height: 100%;        /* На всю высоту экрана */
+    object-fit: cover;   /* Видео красиво заполняет экран без искажения пропорций */
+    z-index: -1;         /* Уводит видео на самый задний план */
+    pointer-events: none; /* Чтобы клики мышкой проходили сквозь видео на кнопки */
+}
+
+/* ===========================
+   ДНЕВНИК (.diary)
+=========================== */
+
+.diary a {
+    text-decoration: none;
+}
+body.diary {
+    background-image: url('fdd.jpg'); 
+    background-attachment: fixed;
+    background-size: 100% auto; 
+}
+.diary article {
+    border: 2px solid rgb(90, 3, 25);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    margin-left: 5px;
+    padding: 15px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diary article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(110, 17, 72, 0.4);
+}
+
+.diary input {
+    border: 2px solid rgb(90, 3, 25);
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+/* баннер приветствия вместо alert */
+.welcome-banner {
+    background-color: #3d1f47;
+    border: 2px solid rgb(90, 3, 25);
+    border-radius: 15px;
+    padding: 12px 20px;
+    text-align: center;
+    color: #e0ccff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* список CSS элементов в дневнике */
+.elements ul {
+    display: flex;
+    gap: 50px;
+    flex: 1;
+}
+
+/* визитная карточка в дневнике */
+.business-card {
+    color: rgb(82, 8, 42);
+    width: 280px;
+    background-color: #cb96cf;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: auto;
+    text-align: center;
+    font-size: 15px;
+}
+.business-card h2{
+    color:#8b1c08;
+}
+.business-card a {
+    color: rgb(82, 8, 42);
+}
+
+.diarycard {
+    color: #a10a0a;
+}
+
+.profile-image {
+    width: 80%;
+    max-width: 150px;
+    display: block;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.full-name {
+    font-size: 35px;
+    color: rgb(82, 8, 42);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.designation {
+    font-size: 30px;
+    color: rgb(82, 8, 42);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.ps {
+    font-size: 20px;
+    color: rgb(70, 5, 36);
+}
+
+.social-media a {
+    color: #a10a0a;
+}
+
+
+/* ===========================
+   МУЗЫКА (.music)
+=========================== */
+
+.music-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+body.music {
+    background-image: url('fdd.jpg'); 
+    background-attachment: fixed;
+    background-size: 100% auto; 
+}
+.track-card {
+    background-color: #3d1f47;
+    border: 2px solid rgb(90, 3, 25);
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.track-name {
+    color: #ccb9ec;
+    font-weight: bold;
+    margin: 0;
+    min-width: 250px;
+}
+
+
+/* ===========================
+   ОБО МНЕ (.about)
+=========================== */
+
+.about a {
+    text-decoration: none;
+    font-weight: bold;
+}
+body.about {
+    background-image: url('fdd.jpg'); 
+    background-attachment: fixed;
+    background-size: 100% auto; 
+}
+.about article {
+    border: 2px solid rgb(90, 3, 25);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    padding: 15px 20px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about ul li::before {
+    content: "✦ ";
+    color: #6e1148;
+}
+
+
+/* ===========================
+   АНИМЕ (.anime)
+=========================== */
+
