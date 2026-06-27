@@ -250,7 +250,8 @@ footer {
 body.diary {
     background-image: url('fdd.jpg'); 
     background-attachment: fixed;
-    background-size: 100% auto; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .diary article {
     border: 2px solid rgb(90, 3, 25);
@@ -364,7 +365,8 @@ body.diary {
 body.music {
     background-image: url('fdd.jpg'); 
     background-attachment: fixed;
-    background-size: 100% auto; 
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 .track-card {
     background-color: #3d1f47;
@@ -395,7 +397,8 @@ body.music {
 body.about {
     background-image: url('fdd.jpg'); 
     background-attachment: fixed;
-    background-size: 100% auto; 
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 .about article {
     border: 2px solid rgb(90, 3, 25);
@@ -415,8 +418,6 @@ body.about {
     color: #6e1148;
 }
 
+Fix mobile layout
 
-/* ===========================
-   АНИМЕ (.anime)
-=========================== */
 
