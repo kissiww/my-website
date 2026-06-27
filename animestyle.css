@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('anime-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* тёмный оверлей поверх фона */
+.login::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 0, 35, 0.45);
+}
+
+/* стеклянная карточка */
+.card {
+    position: relative;
+    width: 380px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    padding: 40px 36px;
+    box-shadow: 0 8px 40px rgba(80, 0, 80, 0.4);
+    color: #f0e6ff;
+}
+
+/* переключатель логин/регистрация */
+.tabs {
+    display: flex;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 32px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: rgba(240, 230, 255, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: rgba(110, 17, 72, 0.7);
+    color: #f0e6ff;
+    box-shadow: 0 2px 12px rgba(110, 17, 72, 0.5);
+}
+
+/* форма */
+.form {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form.active {
+    display: flex;
+}
+
+.form h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f0e6ff;
+    margin-bottom: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #f0e6ff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(240, 230, 255, 0.4);
+}
+
+.input-group input:focus {
+    border-color: rgba(180, 100, 200, 0.6);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* кнопка подтверждения */
+a.submit-btn {
+    margin-top: 8px;
+    padding: 14px;
+    background: linear-gradient(135deg, #6e1148, #a01a6a);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.submit-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+a.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* нижняя подпись */
+.switch-text {
+    text-align: center;
+    font-size: 13px;
+    color: rgba(240, 230, 255, 0.5);
+    margin-top: 4px;
+}
+
+.switch-text span {
+    color: #d4a0f0;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.switch-text span:hover {
+    color: #f0c0ff;
+}
+
+/* ссылка назад */
+.back-link {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    color: #992222f5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #f0e6ff;
+}
+/* ==========================================================================
+   ОБНУЛЕНИЕ И ШРИФТЫ
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   СТРАНИЦА АНИМЕ (.anime) — Полностью твои цвета
+   ========================================================================== */
+.anime {
+    color: #860505f5;
+    background-color: #020102;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Контейнер для всего контента страницы */
+.animee {
+    line-height: 1.6;
+    font-size: 15px;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+/* Заголовок "My favorite anime!" */
+.animestart {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   КАРТОЧКА АНИМЕ (article) — Flexbox вместо маргинов
+   ========================================================================== */
+.anime article {
+    display: flex;
+    flex-wrap: nowrap;       /* Жестко держим текст и видео в один ряд */
+    gap: 40px;
+    align-items: flex-start; /* Текст и видео начинаются строго сверху */
+    justify-content: space-between;
+    
+    width: 100%;
+    border: 2px solid rgb(255, 0, 50);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(2, 1, 2, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку */
+.anime article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(90, 3, 25, 0.5);
+}
+
+/* ==========================================================================
+   ВНУТРЕННИЕ БЛОКИ КАРТОЧКИ
+   ========================================================================== */
+
+/* Левая часть: текстовое описание (Сюжет) */
+.text1 {
+    flex: 1; /* Текст забирает всё свободное пространство слева */
+    padding-right: 20px;
+}
+.text1 h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #860505f5;     /* Приятный неоновый оттенок для подзаголовка */
+}
+.text1 p{
+    font-size: 20px;
+}
+.text1 h3{
+    font-size: 28px;
+}
+/* Правая часть: Безопасный контейнер для видео */
+.video-container {
+      /* Задаем фиксированную ширину для вертикального формата */
+    width: 500px;
+    height: 850px;    /* Увеличиваем высоту, чтобы вертикальное видео встало в полный рост */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgb(255, 0, 50);
+    box-shadow: 0 0 15px rgba(90, 3, 25, 0.3);
+}
+
+/* Твое видео внутри контейнера */
+#background-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Видео идеально заполнит рамку без искажений */
+}
+
+/* ==========================================================================
+   ССЫЛКА НАЗАД (.back-link)
+   ========================================================================== */
+.back-link {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    color: #992222f5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 10; /* Чтобы ссылка всегда была поверх других элементов при скролле */
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #f0e6ff;
+}
